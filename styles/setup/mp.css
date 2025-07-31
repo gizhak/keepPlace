@@ -1,0 +1,249 @@
+/* RESPONSIVE CSS */
+
+/* TABLET */
+@media (max-width: 768px) {
+
+
+    .earth h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 1em;
+        place-self: start center;
+        padding: 1em;
+    }
+
+    nav a {
+        font-size: 18px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+    }
+
+
+    .container {
+        width: 90%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .register-container {
+        width: 100%;
+        max-width: 400px;
+        padding: 4em 2em 3em 2em;
+    }
+
+    .register-title {
+        width: 120px;
+    }
+
+
+    .container-place {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .places-container {
+        width: 100%;
+        max-width: 700px;
+        padding: 4em 1.5em 3em 1.5em;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .places-title {
+        width: 300px;
+    }
+
+    .input-map {
+        width: 100%;
+        padding: 0;
+        order: 1;
+    }
+
+    .input-map img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .input-place {
+        width: 100%;
+        max-width: none;
+        order: 2;
+    }
+
+    .place-btn {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+
+    .map-conf {
+        max-width: none;
+        font-size: 14px;
+    }
+}
+
+/* MOBIL-SMALL */
+@media (max-width: 480px) {
+
+
+    .earth h1 {
+        font-size: 20px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5em;
+        padding: 1em 0.5em;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 12px;
+        min-width: 70px;
+        text-align: center;
+    }
+
+
+    .container {
+        width: 100%;
+        padding: 10px;
+        min-height: 100vh;
+    }
+
+    .register-container {
+        width: 100%;
+        max-width: 350px;
+        padding: 3em 1.5em 2em 1.5em;
+        margin: 10px;
+    }
+
+    .register-title {
+        width: 100px;
+        font-size: 20px;
+    }
+
+    .register-title span {
+        font-size: 20px;
+    }
+
+    .input_field {
+        height: 40px;
+        font-size: 16px;
+        padding-inline: 15px 20px;
+    }
+
+    .register-btn {
+        height: 45px;
+        font-size: 18px;
+    }
+
+
+    .container-place {
+        width: 100%;
+        padding: 5px;
+        min-height: 100vh;
+    }
+
+    .places-container {
+        width: 100%;
+        max-width: none;
+        margin: 5px;
+        padding: 3em 1em 2em 1em;
+        border-radius: 10px;
+    }
+
+    .places-title {
+        width: 250px;
+        height: 40px;
+    }
+
+    .places-title span {
+        font-size: 18px;
+    }
+
+    .input-map img {
+        border-radius: 8px;
+    }
+
+    .input-place {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .button-group {
+        gap: 15px;
+    }
+
+    .place-btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 25px;
+    }
+
+    .map-conf {
+        font-size: 12px;
+        padding: 8px;
+        margin-top: 15px;
+    }
+
+    .map-conf td {
+        padding: 4px 6px;
+        font-size: 11px;
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    nav a {
+        font-size: 12px;
+        padding: 6px 8px;
+        min-width: 60px;
+    }
+
+    .register-container {
+        padding: 2.5em 1em 1.5em 1em;
+    }
+
+    .places-container {
+        padding: 2.5em 0.8em 1.5em 0.8em;
+    }
+
+    .places-title {
+        width: 200px;
+        height: 35px;
+    }
+
+    .places-title span {
+        font-size: 16px;
+    }
+
+    .place-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
+/* MOBIL */
+@media (hover: none) and (pointer: coarse) {
+
+    .place-btn,
+    .register-btn,
+    nav a {
+        min-height: 44px;
+    }
+
+    .place-btn:hover,
+    .register-btn:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
