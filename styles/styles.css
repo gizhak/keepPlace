@@ -1,18 +1,18 @@
 /* SETUP */
-@import url('/styles/setup/var.css');
-@import url('/styles/setup/typography.css');
+@import url('setup/var.css');
+@import url('setup/typography.css');
 
 
 /* BASICS */
-@import url('/styles/basics/base.css');
-@import url('/styles/basics/helpers.css');
-@import url('/styles/basics/layout-index.css');
-@import url('/styles/basics/layout-login.css');
-@import url('/styles/basics/layout-register.css');
-@import url('/styles/basics/layout-places.css');
+@import url('basics/base.css');
+@import url('basics/helpers.css');
+@import url('basics/layout-index.css');
+@import url('basics/layout-login.css');
+@import url('basics/layout-register.css');
+@import url('basics/layout-places.css');
 
 
 /* COMPONENT */
 
 /* MQ */
-@import url('/styles/setup/mp.css');
+@import url('setup/mp.css');
