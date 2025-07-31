@@ -1,0 +1,63 @@
+/* INDEX */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.earth {
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    min-height: 100vh;
+    background-color: #3332;
+    overflow: clip;
+
+    color: white;
+    text-align: center;
+}
+
+.earth>* {
+    grid-area: 1 / 1;
+}
+
+.video-bg {
+    position: absolute;
+    z-index: -1;
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+nav {
+    display: flex;
+    gap: 1.8em;
+
+    place-self: start end;
+    padding-block-start: 2em;
+    padding-inline-end: 2em;
+
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+nav a:hover {
+    transition: 0.3s;
+    transform: translateY(-2px);
+    text-decoration: underline;
+}

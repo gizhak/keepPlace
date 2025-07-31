@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Place - Login</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="earth" onload="onInit()">
+    <video class="video-bg" autoplay muted loop>
+        <source src="video/earth2.mp4" />
+    </video>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="places.html">Places</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="container">
+        <div class="register-container">
+            <div class="register-title">
+                <span>Register</span>
+            </div>
+
+            <div class="input-register">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" class="input_field email" id="email" onchange="getEmail(this.value)" />
+            </div>
+            <div class="input-register">
+                <label for="age">Age: <span id="sAge">26</span></label>
+                <input type="range" id="age" class="input_field age" name="age" step="10" min="18" max="120" value="26"
+                    onchange="showAge(this.value)" />
+            </div>
+
+            <div class="input-register">
+                <label for="color-background">Set Backgroud Color: </label>
+                <input type="color" id="color-bg" class="input_field color-background" name="color" form="frmRegister"
+                    value="#000000" onchange="getBackColor(this.value)" />
+            </div>
+            <div class="input-register">
+                <label for="color-text">Set Text Color: </label>
+                <input type="color" id="color-tx" class="input_field color-text" name="color" form="frmRegister"
+                    value="#000000" onchange="getTextColor(this.value)" />
+            </div>
+            <div class="input-register">
+                <label for="dob">Birth Time:</label>
+                <input type="time" id="time" name="dob" class="input_field time" onchange="showTime(this.value)" />
+            </div>
+
+            <button class="register-btn" onclick="onRegisterBtn()">Register</button>
+
+        </div>
+    </div>
+
+    <script src="/js/user/user.controller.js"></script>
+    <script src="/js/user/user.storage.service.js"></script>
+    <script src="/js/user/user.service.js"></script>
+    <script src="/js/user/user.configurtion.js"></script>
+    <script src="/js/util.service.js"></script>
+
+</body>
+
+</html>

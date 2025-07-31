@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keep Place - Places</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body class="earth" onload="onInit()">
+    <video class="video-bg" autoplay muted loop>
+        <source src="video/earth3.mp4" />
+    </video>
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="places.html">Places</a>
+        <a href="#">About</a>
+    </nav>
+
+    <div class="container-place">
+        <div class="places-container">
+            <div class="places-title">
+                <span>Choose Places</span>
+            </div>
+
+            <div class="input-map">
+                <img src="/image/googlemap.jpg" alt="" srcset="">
+            </div>
+
+            <div class="input-place">
+                <!-- <p class="register-title">Chose Place</p> -->
+                <div class="button-group">
+                    <button class="place-btn fdd">New place</button>
+                    <button class="place-btn find secondary">Find</button>
+                    <button class="place-btn remove danger">Remove Place</button>
+                </div>
+
+
+                <table class="map-conf">
+
+                </table>
+
+            </div>
+
+
+
+            <!-- <button class="register-btn">Register</button> -->
+
+        </div>
+    </div>
+
+    <script src="js/place/place.controller.js"></script>
+    <script src="js/place/place.service.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+/* PLACES */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container-place {
+    display: flex;
+    width: 80%;
+    min-height: 85vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.places-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    backdrop-filter: blur(20px);
+    width: 800px;
+    border: 2px solid var(--primary-color);
+    padding: 6em 2em 6em 2em;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+    color: var(--second-color);
+    overflow: hidden;
+}
+
+.places-title {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: flex;
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    width: 440px;
+    background-color: var(--primary-color);
+    border-radius: 0 0 20px 20px;
+    height: 50px;
+}
+
+.places-title span {
+    color: var(--black-color);
+    font-size: 25px;
+}
+
+.input-place {
+    display: flex;
+    /* position: relative; */
+    flex-direction: column;
+    /* margin: 0 20px; */
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 50%;
+    max-width: 300px;
+}
+
+.input-map {
+    display: flex;
+    position: relative;
+    /* flex-direction: column; */
+    width: 100%;
+    border-radius: 20px;
+    padding-inline: 20px 50px;
+
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.place-btn {
+    /* background: linear-gradient(45deg, var(--primary-color), #45a049); */
+    background: hwb(80% 96% 50%);
+    white-space: nowrap;
+    /* min-width: 50px; */
+    border: none;
+    padding: 12px 50px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    /* box-shadow: 0 0px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.place-btn:hover {
+    transform: translateY(-2px);
+    color: var(--second-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.map-conf {
+    display: table;
+    font-size: 12px;
+    color: var(--black-color);
+    /* flex-direction: column;
+    gap: 10px; */
+    width: 100%;
+    height: 50%;
+    max-width: 350px;
+    margin-top: 20px;
+    padding: 10px;
+    background: hwb(80% 96% 50%);
+    border-radius: 20px;
+    /* backdrop-filter: blur(5px); */
+    border-collapse: collapse;
+}
+
+.map-conf td {
+    padding: 5px 10px;
+    border: 2px solid var(--black-color);
+    text-align: left;
+}
+
+.map-conf tr:first-child td {
+    background: hwb(80% 96% 50%);
+    font-weight: bold;
+}
