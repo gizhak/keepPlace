@@ -1,7 +1,7 @@
 /* RESPONSIVE CSS */
 
 /* ========================================
-   TABLET - מסכים עד 768px
+   TABLET -768px
    ======================================== */
 @media (max-width: 768px) {
 
@@ -24,7 +24,6 @@
         border-radius: 5px;
     }
 
-    /* דף רישום */
     .container {
         width: 90%;
         min-height: auto;
@@ -41,7 +40,6 @@
         width: 120px;
     }
 
-    /* דף מקומות */
     .container-place {
         width: 95%;
         padding: 10px;
@@ -59,16 +57,10 @@
         width: 300px;
     }
 
-    .input-map {
+    .map {
         width: 100%;
-        padding: 0;
+        height: 250px;
         order: 1;
-    }
-
-    .input-map img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
     }
 
     .input-place {
@@ -84,7 +76,7 @@
 
     .map-conf {
         max-width: none;
-        font-size: 14px;
+        max-height: 250px;
     }
 }
 
@@ -93,7 +85,6 @@
    ======================================== */
 @media (max-width: 480px) {
 
-    /* עצירת גלילה */
     html,
     body {
         height: 100vh;
@@ -106,19 +97,15 @@
         overflow: hidden;
     }
 
-    /* דף ראשי */
     .earth h1 {
         font-size: 20px;
         padding: 0 20px;
         text-align: center;
     }
 
-    /* ניוט במקום הרגיל אבל קטן יותר */
     nav {
         position: relative !important;
-        /* וודא שזה יושב נכון */
         z-index: 9999 !important;
-        /* מעל הכל */
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -128,13 +115,11 @@
         padding-block-start: 1em;
         padding-inline-end: 1em;
         pointer-events: auto !important;
-        /* וודא שניתן ללחוץ */
     }
 
     nav a {
         font-size: 12px;
         padding: 8px 12px;
-        /* הגדל קצת לנגיעה */
         min-width: 60px;
         text-align: center;
         background: rgba(0, 0, 0, 0.8) !important;
@@ -143,12 +128,9 @@
         text-decoration: none !important;
         display: block !important;
         pointer-events: auto !important;
-        /* וודא שניתן ללחוץ */
         touch-action: manipulation !important;
-        /* לטלפונים */
     }
 
-    /* דף רישום */
     .containers {
         width: 90% !important;
         max-width: 300px !important;
@@ -159,6 +141,14 @@
     .title.containers {
         position: relative !important;
         z-index: 100 !important;
+    }
+
+    .container {
+        width: 100%;
+        padding: 5px;
+        min-height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
     }
 
     .register-container {
@@ -188,7 +178,6 @@
         font-size: 16px;
     }
 
-    /* דף מקומות */
     .container-place {
         width: 100%;
         padding: 5px;
@@ -214,10 +203,9 @@
         font-size: 16px;
     }
 
-    .input-map img {
+    .map {
+        height: 200px;
         border-radius: 8px;
-        max-height: 200px;
-        object-fit: cover;
     }
 
     .input-place {
@@ -236,19 +224,44 @@
     }
 
     .map-conf {
-        font-size: 10px;
-        padding: 5px;
-        margin-top: 10px;
+        max-height: 200px;
+        font-size: 11px;
     }
 
-    .map-conf td {
-        padding: 3px 5px;
+    .place-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .place-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 8px;
+    }
+
+    .action-btn {
+        flex: 1;
+        margin: 0 2px;
+        padding: 8px;
+        font-size: 11px;
+    }
+
+    .place-name {
+        font-size: 12px;
+    }
+
+    .place-coords {
+        font-size: 10px;
+    }
+
+    .place-date {
         font-size: 9px;
     }
 }
 
 /* ========================================
-   MOBILE SMALL - מסכים עד 320px
+   MOBILE SMALL - 320px
    ======================================== */
 @media (max-width: 320px) {
 
@@ -290,24 +303,44 @@
         height: 38px;
         font-size: 14px;
     }
+
+    .map {
+        height: 150px;
+    }
+
+    .map-conf {
+        max-height: 150px;
+    }
+
+    .place-item {
+        padding: 8px;
+    }
+
+    .action-btn {
+        padding: 6px;
+        font-size: 10px;
+    }
 }
 
 /* ========================================
-   TOUCH DEVICES - מכשירי מגע
+   TOUCH DEVICES 
    ======================================== */
 @media (hover: none) and (pointer: coarse) {
 
     .place-btn,
     .register-btn,
-    nav a {
+    nav a,
+    .action-btn {
         min-height: 44px;
-        /* גודל מינימלי לנגיעה נוחה */
     }
 
     .place-btn:hover,
     .register-btn:hover {
         transform: none;
-        /* הסר אפקטי hover במובייל */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .action-btn:hover {
+        transform: none;
     }
 }

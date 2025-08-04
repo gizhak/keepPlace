@@ -15,7 +15,7 @@
     <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="register.html">Register</a>
-        <a href="places.html">Places</a>
+        <a class="active" href="places.html">Places</a>
         <a href="#">About</a>
     </nav>
 
@@ -25,34 +25,47 @@
                 <span>Choose Places</span>
             </div>
 
-            <div class="input-map">
-                <img src="image/googlemap.jpg" alt="" srcset="">
+            <div class="map">
+                <!-- map loaded here -->
             </div>
 
             <div class="input-place">
-                <!-- <p class="register-title">Chose Place</p> -->
                 <div class="button-group">
-                    <button class="place-btn fdd">New place</button>
-                    <button class="place-btn find secondary">Find</button>
-                    <button class="place-btn remove danger">Remove Place</button>
+                    <button class="place-btn" onclick="onNewPlace()">New place</button>
+                    <button class="place-btn secondary" onclick="onFindPlace()">Find</button>
+                    <button class="place-btn danger" onclick="clearAllPlaces()">Clear All</button>
                 </div>
-
-
-                <table class="map-conf">
-
-                </table>
-
             </div>
 
+            <div class="places-list-section">
+                <button class="toggle-places-btn" onclick="togglePlacesList()">
+                    <span id="toggle-text">Show Saved Places</span>
+                    <span id="places-count">(0)</span>
+                </button>
 
+                <div class="map-conf" id="placesList" style="display: none;">
+                    <!-- places will be here -->
+                </div>
+            </div>
 
-            <!-- <button class="register-btn">Register</button> -->
-
+            <div class="location-info" style="display: none;">
+                <p>Latitude: <span id="latitude">-</span></p>
+                <p>Longitude: <span id="longitude">-</span></p>
+                <p>Accuracy: <span id="accuracy">-</span></p>
+                <p>Time: <span id="timestamp">-</span></p>
+                <p id="locationError"></p>
+            </div>
         </div>
     </div>
 
-    <script src="js/place/place.controller.js"></script>
+    <script src="js/util.service.js"></script>
+    <script src="js/user/user.storage.service.js"></script>
     <script src="js/place/place.service.js"></script>
+    <script src="js/place/place.controller.js"></script>
+    <script src="js/place/geo-location.js"></script>
+
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByauiCafS6jpjKJiWeTDz2wmpLTha63cU&loading=async"></script>
 
 </body>
 
